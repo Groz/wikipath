@@ -2,6 +2,7 @@
 
 <head>
   <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"></script>
   <script type="text/javascript" src="wikipath.js"></script>
 </head>
 
@@ -10,18 +11,35 @@
   <table>
     <tr>
       <td><label for="startTerm">Start term</label></td>
-      <td><input type="text" id="startTerm"></input></td>
+      <td><input type="text" id="startTerm" value="Moscow"></input></td>
     </tr>
 
     <tr>
       <td><label for="endTerm">End term</label></td>
-      <td><input type="text" id="endTerm"></input></td>
+      <td><input type="text" id="endTerm" value="San Francisco"></input></td>
     </tr>
 
     <tr>
-      <td><button id="start">Find path</button></td>
+      <td><button id="findPath">Find path</button></td>
+      <td><button id="stop" disabled>Stop</button></td>
+    </tr>
+
+    <tr>
+      <td><label for="crawlCount">Crawled</label></td>
+      <td><span id="crawlCount">0</span></td>
+    </tr>
+
+    <tr>
+      <td><label for="currentCrawl">Current</label></td>
+      <td><span id="currentCrawl">Moscow</span></td>
     </tr>
   </table>
+
+  <div>
+    <label for="resultsTable">Results</label>
+    <table id="resultsTable">
+    </table>
+  </div>
 
 </body>
 
