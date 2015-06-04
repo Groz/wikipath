@@ -92,8 +92,9 @@ $(function() {
   var $resultsTable = $("#resultsTable");
   var $findPath = $("#findPath");
   var $stop = $("#stop");
+  var $wikiRoot = $("#wikiRoot");
 
-  var wiki = wikiAPI("https://en.wikipedia.org");
+  var wiki = wikiAPI($wikiRoot.val());
   var maxDepth = 3;
 
   var forwardCrawler, backCrawler;
