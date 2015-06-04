@@ -94,7 +94,6 @@ $(function() {
   var $stop = $("#stop");
   var $wikiRoot = $("#wikiRoot");
 
-  var wiki = wikiAPI($wikiRoot.val());
   var maxDepth = 3;
 
   var forwardCrawler, backCrawler;
@@ -111,6 +110,8 @@ $(function() {
   }
 
   function onStartClicked() {
+    var wiki = wikiAPI($wikiRoot.val());
+
     $findPath.prop('disabled', true);
     $stop.prop('disabled', false);
 
